@@ -20,18 +20,18 @@ return [
 
     // The root directory where your applications will be deployed
     // This path *needs* to start at the root, ie. start with a /
-    'root_directory' => '/home/www/',
+    'root_directory' => '/web',
 
     // The folder the application will be cloned in
     // Leave empty to use `application_name` as your folder name
-    'app_directory'  => '',
+    'app_directory'  => null,
 
     // A list of folders/file to be shared between releases
     // Use this to list folders that need to keep their state, like
     // user uploaded data, file-based databases, etc.
     'shared'         => [
-        'storage/logs',
-        'storage/sessions',
+        'var/logs',
+        'var/sessions',
     ],
 
     // Execution
@@ -56,24 +56,6 @@ return [
     ////////////////////////////////////////////////////////////////////
 
     'permissions'    => [
-
-        // The folders and files to set as web writable
-        'files'    => [
-            'app/database/production.sqlite',
-            'storage',
-            'public',
-        ],
-
-        // Here you can configure what actions will be executed to set
-        // permissions on the folder above. The Closure can return
-        // a single command as a string or an array of commands
-        'callback' => function ($task, $file) {
-            return [
-                sprintf('chmod -R 755 %s', $file),
-                sprintf('chmod -R g+s %s', $file),
-                sprintf('chown -R www-data:www-data %s', $file),
-            ];
-        },
 
     ],
 

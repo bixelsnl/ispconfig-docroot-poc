@@ -41,7 +41,7 @@ return [
             'host'      => '',
             'username'  => '',
             'password'  => '',
-            'key'       => '/Users/choong/.ssh/id_rsa',
+            'key'       => '',
             'keyphrase' => '',
             'agent'     => '',
             'db_role'   => true,

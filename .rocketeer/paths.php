@@ -13,10 +13,10 @@ return [
     ////////////////////////////////////////////////////////////////////
 
     // Path to the PHP binary
-    'php'      => '',
+    'php'      => '/opt/rh/rh-php70/root/bin/php',
 
     // Path to Composer
-    'composer' => '',
+    'composer' => '/private/composer.phar',
 
     // Path to the Artisan CLI
     'artisan'  => 'artisan',
