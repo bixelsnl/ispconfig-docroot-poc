@@ -24,7 +24,9 @@ return [
     // Tasks to execute after the core Rocketeer Tasks
     'after'  => [
         'setup'   => [],
-        'deploy'  => [],
+        'deploy'  => [
+            'touch /private/php-fpm.reload'
+        ],
         'cleanup' => [],
     ],
 

@@ -29,10 +29,8 @@ return [
     // A list of folders/file to be shared between releases
     // Use this to list folders that need to keep their state, like
     // user uploaded data, file-based databases, etc.
-    'shared'         => [
-        'var/logs',
-        'var/sessions',
-    ],
+
+    'symlink' => 'relative',
 
     // Execution
     //////////////////////////////////////////////////////////////////////
